@@ -1,0 +1,9 @@
+# Mac directory file
+.DS_Store
+
+# Npm packages and build directory
+node_modules
+build
+
+# package.json lock file
+package-lock.json
