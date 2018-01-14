@@ -6,10 +6,13 @@ const debug = process.env.NODE_ENV !== 'production';
 module.exports = {
   // context: path.resolve(__dirname, 'src'),
   devtool: debug ? 'inline-sourcemap' : null,
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.css', '.scss'],
   },
   plugins: [
     new HtmlWebpackPlugin({
